@@ -1,6 +1,7 @@
 
 EULA_STUFF="-e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y "
-ddir=/opt/var/lib/mssql/data
+ddir=/svr/var/lib/mssql/data
+ddir=/mnt/a/data
 mkdir -p $ddir
 . .env
 mlocation=/data
@@ -28,6 +29,6 @@ cmd="docker $RUNMODE $EULA_STUFF --name $containername \
      $dockertag"
 
 echo "$cmd"
-$cmd
+#$cmd
 
 
